@@ -20,8 +20,7 @@
   },
   "dependencies": {
     "@mdi/font": "^7.3.67",
-    "sweetalert2": "^11.10.1"
-  }
+    "sweetalert2": "^11.10.1",
     "axios": "^1.6.5",
     "sweetalert2": "^11.6.13"
   },
