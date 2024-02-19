@@ -10,19 +10,26 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/devtools": "latest",
-    "nuxt": "^3.8.2",
+    "@formkit/auto-animate": "^0.8.1",
+    "@nuxt/devtools": "^1.0.6",
+    "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
+    "@pinia/nuxt": "^0.5.1",
+    "concurrently": "^8.2.2",
+    "nodemon": "^3.0.2",
+    "nuxt": "^3.9.3",
     "vite-plugin-vuetify": "^1.0.2",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5",
+    "vue-sweetalert2": "5.0.2",
     "vuetify": "^3.4.3",
     "vuetify-nuxt-module": "^0.6.7"
   },
   "dependencies": {
     "@mdi/font": "^7.3.67",
-    "sweetalert2": "^11.10.1",
     "axios": "^1.6.5",
-    "sweetalert2": "^11.6.13"
+    "nuxi": "^3.10.0",
+    "pinia": "^2.1.7",
+    "sweetalert2": "^11.10.4"
   },
   "description": "A 3d printing application for the management of 3d print commissions",
   "version": "0.1.0",
