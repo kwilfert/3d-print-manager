@@ -8,12 +8,23 @@ export const getModel = async (id) => {
     return baseClient.get(`/models/${id}`);
 }
 
+// this one takes formData
 export const createModel = async (model) => {
-    return baseClient.post('/models', model);
+    console.log(JSON.stringify(model, null ,3))
+    return baseClient.post('/models', model, {
+        headers: {
+            'Content-Type': 'multipart/form-data',
+        }
+    });
 }
 
+// this one takes formData
 export const updateModel = async (id, model) => {
-    return baseClient.put(`/models/${id}`, model);
+    return baseClient.put(`/models/${id}`, model, {
+        headers: {
+            'Content-Type': 'multipart/form-data',
+        }
+    });
 }
 
 export const deleteModel = async (id) => {

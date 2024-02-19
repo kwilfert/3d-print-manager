@@ -1,22 +1,22 @@
 import baseClient from "~/clients/baseclient.js";
 
-const getMaterials = async () => {
+export const getMaterials = async () => {
     return baseClient.get('/materials');
 }
 
-const getMaterial = async (id) => {
+export const getMaterial = async (id) => {
     return baseClient.get(`/materials/${id}`);
 }
 
-const createMaterial = async (material) => {
+export const createMaterial = async (material) => {
     return baseClient.post("/materials", material);
 }
 
-const updateMaterial = async (id, material) => {
+export const updateMaterial = async (id, material) => {
     return baseClient.put(`/materials/${id}`, material);
 }
 
-const deleteMaterial = async (id) => {
+export const deleteMaterial = async (id) => {
     return baseClient.delete(`/materials/${id}`);
 }
 
