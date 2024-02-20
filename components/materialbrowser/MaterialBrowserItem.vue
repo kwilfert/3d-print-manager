@@ -1,7 +1,7 @@
 <script setup>
 
 const props = defineProps({
-  model:
+  material:
   {
     type: Object,
     default: null
@@ -15,10 +15,10 @@ const emit = defineEmits ([
 </script>
 
 <template>
-  <v-card variant="elevated" @click="emit( 'onSelect', props.model)">
+  <v-card variant="elevated" @click="emit( 'onSelect', props.material)">
     <v-img
         :cover="true"
-        :src="props.model.thumbnailPath"
+        :src="props.material.imagePath"
         aspect-ratio="1"
         class="grey lighten-2 border-b"
     >
@@ -39,18 +39,19 @@ const emit = defineEmits ([
       </template>
     </v-img>
     <v-row class="pa-4">
-      <v-col cols="8">
-        <h3>{{ props.model.name }}</h3>
+      <v-col cols="12">
+        <h4>{{ props.material.name }}</h4>
       </v-col>
-      <v-col cols="4">
-        <h3 class="text-green text-right text-no-wrap">{{ props.model.price }} €</h3>
+      <v-col cols="12" align-self="end">
+        <h3 class="text-green text-right text-no-wrap">+ {{ props.material.price }} €</h3>
       </v-col>
       <v-col cols="12">
-        <p>{{ props.model.notes }}</p>
+        <p v-for="attribute in props.material.attributes">- {{ attribute }}</p>
       </v-col>
     </v-row>
   </v-card>
 </template>
 
 <style scoped>
+
 </style>
