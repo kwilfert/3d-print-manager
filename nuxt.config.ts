@@ -4,7 +4,10 @@ import {transformAssetUrls} from "vite-plugin-vuetify";
 export default defineNuxtConfig({
     devtools: {enabled: true},
     modules: [
-        'vuetify-nuxt-module'
+        'vuetify-nuxt-module',
+        '@formkit/auto-animate',
+        '@pinia/nuxt',
+        '@pinia-plugin-persistedstate/nuxt',
     ],
     vite: {
         vue: {
@@ -15,12 +18,8 @@ export default defineNuxtConfig({
     },
     vuetify: {
         /* vuetify options */
-        vuetifyOptions: {
-            // @TODO: list all vuetify options
-        },
+        vuetifyOptions: {},
 
-        moduleOptions: {
-            // @TODO: list all vuetify module options
-        }
+        moduleOptions: {}
     }
 })
