@@ -3,7 +3,7 @@ import $swal from "sweetalert2";
 
 const promptCommissionKey = () => {
   $swal.fire({
-    title: "Bitte gibt deine Auftragsnummer an!",
+    title: "Auftragsnummer angeben",
     input: "text",
     showCancelButton: true,
     cancelButtonText: "Abbrechen",
