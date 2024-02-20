@@ -2,25 +2,30 @@
 import PrintMediumForm from "~/components/forms/PrintMediumForm.vue";
 import ModelForm from "~/components/forms/ModelForm.vue";
 import SchedulingForm from "~/components/forms/SchedulingForm.vue";
+import CheckoutForm from "~/components/forms/CheckoutForm.vue";
 
-const commissionData = ref({});
+const order = ref({});
 
 const setTargetDate = (date) => {
-  commissionData.value.target_date = date;
+  order.value.target_date = date;
 }
 const setCatalogueModelData = (data) => {
-  commissionData.value.catalogue_model = data;
+  order.value.catalogue_model = data;
 }
 
 const setCustomModelData = (data) => {
-  commissionData.value.custom_model = data;
+  order.value.custom_model = data;
 }
 
 const setPrintMediumData = (data) => {
-  commissionData.value.print_medium = data;
+  order.value.print_medium = data;
 }
 
-watch(commissionData, (newVal) => {
+const processOrder = () => {
+
+}
+
+watch(order, (newVal) => {
   console.log(JSON.stringify(newVal, null, 2));
 });
 
@@ -43,16 +48,7 @@ watch(commissionData, (newVal) => {
             <scheduling-form @on-date-change="setTargetDate"/>
           </template>
           <template v-slot:item.4>
-            <v-card title="Kasse">
-              Auflistung der Kosten
-              <ol>
-                <li>Katalog-Modell-kosten immer pauschal, Sonderdruck stets nach Größe und Filament</li>
-                <li>Menge der Figuren (Bulk bestellung? überhaupt erlauben?)</li>
-                <li>Druckkosten als Faktor von Größe und Filament/Resin</li>
-                <li>Versandkosten abhängig von Größe, Tracking soll immer dabei sein (oder 6,99EUR pauschal mit Tracking?)</li>
-                <li>Wichtig: "Kostenpflichtig bestellen" button</li>
-              </ol>
-            </v-card>
+            <checkout-form :order="order"/>
           </template>
         </v-stepper>
       </v-col>
