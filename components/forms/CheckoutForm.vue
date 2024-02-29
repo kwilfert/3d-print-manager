@@ -52,15 +52,15 @@ const submitOrders = () => {
 
 <template>
   <v-card title="Kasse">
-    Auflistung der Kosten
-    <ol>
-      <li>Katalog-Modell-kosten immer pauschal, Sonderdruck stets nach Größe und Filament</li>
-      <li>Menge der Figuren (Bulk bestellung? überhaupt erlauben?)</li>
-      <li>Druckkosten als Faktor von Größe und Filament/Resin</li>
-      <li>Versandkosten abhängig von Größe, Tracking soll immer dabei sein (oder 6,99EUR pauschal mit Tracking?)</li>
-      <li>Wichtig: "Kostenpflichtig bestellen" button</li>
-    </ol>
     <v-card-text>
+      <ol class="mx-4">
+        <li>Katalog-Modell-kosten immer pauschal, Sonderdruck stets nach Größe und Filament</li>
+        <li>Menge der Figuren (Bulk bestellung? überhaupt erlauben?)</li>
+        <li>Druckkosten als Faktor von Größe und Filament/Resin</li>
+        <li>Versandkosten abhängig von Größe, Tracking soll immer dabei sein (oder 6,99EUR pauschal mit Tracking?)</li>
+        <li>Wichtig: "Kostenpflichtig bestellen" button</li>
+      </ol>
+      <br>
       <h3>Katalogkäufe</h3>
       <v-divider/>
       <v-row v-for="order in catalogueOrder" justify="space-between">
@@ -105,10 +105,9 @@ const submitOrders = () => {
           }} EUR
         </v-col>
       </v-row>
-
       <br>
       <v-row justify="end">
-        <v-btn color="primary" @click="submitOrders">Bestellung kostenpflichtig absenden</v-btn>
+        <v-btn class="mt-4" color="primary" @click="submitOrders">Bestellung kostenpflichtig absenden</v-btn>
       </v-row>
     </v-card-text>
   </v-card>
