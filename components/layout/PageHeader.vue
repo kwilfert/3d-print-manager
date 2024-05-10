@@ -1,33 +1,24 @@
 <script lang="ts" setup>
-import bannerImage from "~/assets/images/pexels-google-deepmind-17485708.jpg";
+import deepmind from "@/assets/images/pexels-google-deepmind-17485708.jpg"
+import TopNavigation from "~/components/layout/TopNavigation.vue";
 </script>
 
 <template>
-    <v-app-bar app
-        color="teal-darken-4"
-        :image="bannerImage"
-    >
-      <template v-slot:image>
-        <v-img
-            gradient="to top right, rgba(19,84,122,.8), rgba(128,208,199,.8)"
-        ></v-img>
-      </template>
-      <template v-slot:prepend>
-        <v-app-bar-nav-icon></v-app-bar-nav-icon>
-      </template>
-
-      <v-app-bar-title>KAW-Prints</v-app-bar-title>
-
-      <v-spacer></v-spacer>
-
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-dots-vertical</v-icon>
-      </v-btn>
-    </v-app-bar>
+  <v-sheet>
+    <!--Parallax Background and Page Title -->
+    <v-parallax src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg" height="300">
+      <div class="inline-block align-middle ms-10 mt-20 text-white font-semibold align-middle">
+        <p class="text-4xl">
+          <span class="underline">KAW-Prints</span>: 3D-Druck mit Herz und Seele
+        </p>
+        <p class="mt-2 text-3xl">
+          Print-on-Demand-Service für Filament und UV-Harz
+        </p>
+      </div>
+    </v-parallax>
+    <!--Nav bar with centered nav items in nuxt. Should stick to bottom of header -->
+    <top-navigation/>
+  </v-sheet>
 </template>
 
 <style scoped>
