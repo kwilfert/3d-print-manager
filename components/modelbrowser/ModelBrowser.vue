@@ -24,13 +24,22 @@ onMounted(async () => {
 
 </script>
 <template>
-  <v-container>
+  <v-container class="border" max-width="1000">
+    <v-row>
+      <v-col cols="6">
+        <v-text-field label="Suche..." variant="outlined"/>
+      </v-col>
+      <v-col cols="6">
+        <v-select label="Tags" multiple variant="outlined"/>
+      </v-col>
+      <v-col cols="6">PLACEHOLDER FOR</v-col>
+    </v-row>
     <v-row>
       <v-col v-for="item in browser_items" cols="12" lg="3" md="4" sm="6">
         <model-browser-item :model="item" @onSelect="selectModel"/>
       </v-col>
     </v-row>
-    <model-browser-item-modal @on-close="selectedModel = null" :selectedModel="selectedModel" />
+    <model-browser-item-modal :selectedModel="selectedModel" @on-close="selectedModel = null"/>
   </v-container>
 </template>
 <style scoped>
