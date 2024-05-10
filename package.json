@@ -8,7 +8,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "deloy_prod": "npm run generate && node scripts/deploy_prod.js"
+    "deloy_prod": "npm run generate && node scripts/deploy_prod.js",
+    "deloy_qs": "npm run generate && node scripts/deploy_qs.js"
   },
   "devDependencies": {
     "@formkit/auto-animate": "^0.8.1",
