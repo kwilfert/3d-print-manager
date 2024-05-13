@@ -31,6 +31,7 @@
     "vuetify-nuxt-module": "^0.6.7"
   },
   "dependencies": {
+    "@behold/vue": "^0.1.7",
     "@mdi/font": "^7.3.67",
     "axios": "^1.6.5",
     "nuxi": "^3.10.0",
