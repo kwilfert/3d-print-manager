@@ -9,7 +9,7 @@ export default defineNuxtConfig({
         '@formkit/auto-animate',
         '@pinia/nuxt',
         '@pinia-plugin-persistedstate/nuxt',
-        "@nuxtjs/tailwindcss"
+        '@nuxtjs/color-mode'
     ],
     vite: {
         vue: {
