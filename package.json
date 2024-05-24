@@ -12,7 +12,6 @@
     "deloy_qs": "npm run generate && node scripts/deploy_qs.js"
   },
   "devDependencies": {
-    "@formkit/auto-animate": "^0.8.1",
     "@nuxt/devtools": "^1.0.6",
     "@nuxtjs/color-mode": "^3.4.1",
     "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
@@ -20,7 +19,7 @@
     "autoprefixer": "^10.4.19",
     "concurrently": "^8.2.2",
     "nodemon": "^3.0.2",
-    "nuxt": "^3.9.3",
+    "nuxt": "^3.11.2",
     "vite-plugin-vuetify": "^1.0.2",
     "vue": "^3.3.8",
     "vue-router": "^4.2.5",
@@ -32,7 +31,6 @@
     "@behold/vue": "^0.1.7",
     "@mdi/font": "^7.3.67",
     "axios": "^1.6.5",
-    "nuxi": "^3.10.0",
     "pinia": "^2.1.7",
     "sweetalert2": "^11.10.4"
   },
