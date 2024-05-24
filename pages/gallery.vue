@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import BeholdWidget from "@behold/vue"
+import InstaWidget from "~/components/misc/InstaWidget.vue";
 </script>
 <template>
   <v-container max-width="1000">
@@ -7,7 +7,7 @@ import BeholdWidget from "@behold/vue"
     <div class="text-xl mt-10 text-center">> Instagram Embed hier reinkgeklatscht, bis eigene Implementierung
       stattfindet <
     </div>
-    <behold-widget feed-id="nNYjbnBrtIqs8vz9d1kO"/>
+    <InstaWidget/>
   </v-container>
 </template>
 

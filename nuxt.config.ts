@@ -9,6 +9,7 @@ export default defineNuxtConfig({
         '@pinia-plugin-persistedstate/nuxt',
         '@nuxtjs/color-mode'
     ],
+    plugins: ['~/plugins/lightwidget.ts'],
     vuetify: {
         /* vuetify options */
         vuetifyOptions: {
