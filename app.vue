@@ -3,7 +3,7 @@ import PageFooter from "~/components/layout/PageFooter.vue";
 import PageHeader from "~/components/layout/PageHeader.vue";
 </script>
 <template>
-  <v-app>
+  <v-app theme="dark">
     <PageHeader/>
     <v-main>
       <nuxt-page/>

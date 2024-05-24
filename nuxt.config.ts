@@ -1,27 +1,47 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-import {transformAssetUrls} from "vite-plugin-vuetify";
+import vuetify from "vite-plugin-vuetify";
 
 export default defineNuxtConfig({
     devtools: {enabled: true},
     css: ['@/assets/css/main.css'],
     modules: [
         'vuetify-nuxt-module',
-        '@formkit/auto-animate',
         '@pinia/nuxt',
         '@pinia-plugin-persistedstate/nuxt',
         '@nuxtjs/color-mode'
     ],
-    vite: {
-        vue: {
-            template: {
-                transformAssetUrls,
-            },
-        },
-    },
     vuetify: {
         /* vuetify options */
-        vuetifyOptions: {},
-
+        vuetifyOptions: {
+            theme: {
+                themes: {
+                    light: {
+                        dark: false,
+                    },
+                    dark: {
+                        dark: true,
+                        colors: {
+                            primary: '#191825',
+                            secondary: '#865DFF',
+                            tertiary: '#E384FF',
+                            accent: '#FFA3FD'
+                        }
+                    }
+                }
+            }
+        },
         moduleOptions: {}
+    },
+    build: {
+        transpile: ['vuetify'],
+    },
+    vite: {
+        logLevel: 'info', // Enable detailed logging
+        server: {
+            hmr: {
+                overlay: true,
+                port: 24678, // Specify a port for HMR
+                protocol: 'ws' // Ensure WebSocket protocol is used
+            }
+        }
     }
 })

@@ -10,7 +10,7 @@ import banner from "~/assets/images/3302177.jpg";
       <div class="ms-5 mt-10">
         <div class="ms-5 mt-10 text-white font-weight-bold">
           <p class="text-h4">
-            <span class="text-decoration-underline">KAW-Prints</span><span class="d-none d-sm-block">3D-Druck mit Herz und Seele</span>
+            <span class="text-decoration-underline">KAW-Prints</span><span class="d-none d-sm-block">3D-Druck mit Harz und Seele</span>
           </p>
           <p class="mt-2 text-h5 d-none d-sm-block">
             Print-on-Demand-Service für Filament und UV-Harz
