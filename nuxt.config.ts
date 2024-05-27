@@ -24,7 +24,9 @@ export default defineNuxtConfig({
                             primary: '#191825',
                             secondary: '#865DFF',
                             tertiary: '#E384FF',
-                            accent: '#FFA3FD'
+                            accent: '#FFA3FD',
+                            //needed for dark mode iframe
+                            //'on-background': '#121212'
                         }
                     }
                 }

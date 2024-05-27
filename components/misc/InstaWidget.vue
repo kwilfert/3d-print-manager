@@ -1,20 +1,18 @@
 <template>
-  <div>
+  <v-sheet theme="light">
     <iframe
-        class="lightwidget-widget"
         id="instaframe"
         allowtransparency="true"
+        class="lightwidget-widget"
         src="//lightwidget.com/widgets/9d225b6d76d65e0a8f06741e7a619ce9.html"
-        style="width:100%;border:0;overflow:hidden; height: 500px; margin-top: 10px !important;"
+        style="width:100%;border:0;overflow:hidden; height: 500px; margin-bottom: -8px !important;"
     >
-      <p>Hier wäre jetzt Instagram eingebunden, wenn Du keine Probleme mit iFrames hättest</p>
     </iframe>
-  </div>
+  </v-sheet>
 </template>
 <style>
 .lightwidget-widget {
   width: 100%;
   background-color: #121212 !important;
-  /* doesnt work, because iframe. */
 }
 </style>
