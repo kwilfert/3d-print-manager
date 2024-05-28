@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 const navigation = ref([
   {path: '/home', label: 'Home'},
-  {path: '/gallery', label: 'Galerie'},
   {path: '/shop', label: 'Shop'},
+  {path: '/gallery', label: 'Galerie'},
   {path: '/faq', label: 'FAQ'},
   {path: '/3d-printing-basics', label: '3D-Druck Basics'},
   {path: '/about-us', label: 'Über uns'},
@@ -41,10 +41,6 @@ const navigation = ref([
 .bg-dark-gradient {
   /* vertical gradient black bottom to transparent top */
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
-}
-
-.nav-item-underline {
-  border-bottom: 3px solid rgba(var(--v-theme-primary));
 }
 
 .nav-item {
