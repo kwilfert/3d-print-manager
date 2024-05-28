@@ -9,6 +9,10 @@ import banner from "~/assets/images/3302177.jpg";
   <v-sheet>
     <!--Parallax Background and Page Title -->
     <v-parallax :src="banner" class="banner">
+      <nuxt-link to="/management" class="management-button text-decoration-none">
+        <v-icon icon="mdi-cog"/>
+        <span class="management-text font-weight-bold">Adminbereich</span>
+      </nuxt-link>
       <div class="ms-5 mt-10">
         <div class="ms-5 mt-10 text-white font-weight-bold">
           <p class="text-h4">
@@ -26,6 +30,40 @@ import banner from "~/assets/images/3302177.jpg";
 </template>
 
 <style scoped>
+
+.management-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 10px;
+  transition: width 0.3s, background-color 0.3s;
+  width: 45px; /* initial width to fit only the icon */
+  overflow: hidden;
+}
+
+.management-button:hover {
+  width: 160px; /* expanded width to fit the icon and text */
+  background-color: #444;
+}
+
+.management-text {
+  color: white;
+  margin-left: 10px;
+  white-space: nowrap;
+  transition: transform 0.3s;
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.management-button:hover .management-text {
+  transform: translateX(0);
+  opacity: 1;
+}
+
 .banner {
   @media (max-width: 600px) {
     height: 200px;
