@@ -9,7 +9,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "deloy_prod": "npm run generate && node scripts/deploy_prod.js",
-    "deloy_qs": "npm run generate && node scripts/deploy_qs.js"
+    "deloy_qs": "npm run generate && node scripts/deploy_qs.js",
+    "generate-models": "openapi-generator-cli generate -i http://localhost:8080/api-docs -g typescript-fetch -o ./api-client"
   },
   "devDependencies": {
     "@nuxt/devtools": "^1.0.6",

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import MaterialBrowser from "~/components/materialbrowser/MaterialBrowser.vue";
 
 const props = defineProps(
@@ -28,7 +28,11 @@ const addToCart = () => {
               <v-carousel>
                 <!-- show thumbnail for now -->
                 <!-- TODO: dont use thumbnail. Use one or more of the full resolution images. Waiting for backend -->
-                <v-carousel-item :src="props.selectedModel?.imagePath" cover/>
+                <v-carousel-item
+                    v-for="imgPath in props.selectedModel?.imagePaths"
+                    :key="imgPath"
+                    :src="imgPath"
+`                />
               </v-carousel>
             </v-col>
             <v-col cols="6">
