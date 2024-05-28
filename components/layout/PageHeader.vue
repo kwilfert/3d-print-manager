@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import TopNavigation from "~/components/layout/TopNavigation.vue";
+// Banner attribution, as per freepik guide:
+// Image by <a href="https://www.freepik.com/free-vector/wavy-luxury-abstraction-gradient-violet-tones_6437524.htm#from_view=detail_alsolike">Freepik</a>
 import banner from "~/assets/images/3302177.jpg";
 </script>
 
