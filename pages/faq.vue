@@ -21,6 +21,12 @@ const generalFAQ = [
     answer: 'Leider ist das Bemalen von gedruckten Objekten sehr zeitaufwändig und kann deshalb in meinem Shop nicht angeboten werden. Für gedruckte Objekte aus UV-Harz ist jedoch eine helle oder dunkle Grundierung beim Kaufprozess auswählbar.'
   },
 ];
+
+useHead(
+    {
+      title: 'KAW-Prints - FAQ',
+    }
+)
 </script>
 
 <template>

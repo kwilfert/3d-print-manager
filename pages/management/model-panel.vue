@@ -62,6 +62,12 @@ const deleteItem = (item) => {
   });
 }
 
+useHead(
+    {
+      title: 'KAW-Prints - Model Management',
+    }
+)
+
 </script>
 
 <template>

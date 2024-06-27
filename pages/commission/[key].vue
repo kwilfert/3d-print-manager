@@ -1,9 +1,15 @@
-<script setup lang="js">
+<script setup lang="ts">
+
+useHead(
+    {
+      title: 'KAW-Prints - Commission',
+    }
+)
 
 </script>
 
 <template>
-  <div>YOUR COMMISSIONS</div>
+  <div>YOUR COMMISSION</div>
 </template>
 
 <style scoped>

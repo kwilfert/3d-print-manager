@@ -1,5 +1,9 @@
-<script setup>
-
+<script lang="ts" setup>
+useHead(
+    {
+      title: 'KAW-Prints - Gallery Management',
+    }
+)
 </script>
 
 <template>

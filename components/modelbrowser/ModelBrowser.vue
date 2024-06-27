@@ -1,4 +1,4 @@
-<script lang="js" setup>
+<script lang="ts" setup>
 import {ref} from "vue";
 import ModelBrowserItem from "~/components/modelbrowser/ModelBrowserItem.vue";
 import {getModels} from "~/clients/modelsclient.js";

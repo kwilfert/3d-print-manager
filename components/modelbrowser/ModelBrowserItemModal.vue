@@ -1,9 +1,11 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import MaterialBrowser from "~/components/materialbrowser/MaterialBrowser.vue";
+import type {PropType} from "vue";
+import type {Model} from "~/api-client";
 
 const props = defineProps(
     {
-      selectedModel: Object
+      selectedModel: Object as PropType<Model>,
     }
 )
 const emits = defineEmits(
@@ -13,13 +15,13 @@ const modelQuantity = ref(1);
 
 
 const addToCart = () => {
-  console.log("Add to cart: Model " + props.selectedModel);
+  console.log("Add to cart " + modelQuantity.value + "x Model " + JSON.stringify(props.selectedModel ?? '', null, 3));
 }
 
 </script>
 
 <template>
-  <v-dialog v-model="props.selectedModel" max-width="1000px" @click:outside="emits('onClose')">
+  <v-dialog :model-value="props.selectedModel" max-width="1000px" @click:outside="emits('onClose')">
     <v-card>
       <v-card-text>
         <v-container>
@@ -32,7 +34,7 @@ const addToCart = () => {
                     v-for="imgPath in props.selectedModel?.imagePaths"
                     :key="imgPath"
                     :src="imgPath"
-`                />
+                    `/>
               </v-carousel>
             </v-col>
             <v-col cols="6">

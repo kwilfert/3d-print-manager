@@ -4,10 +4,15 @@ const router = useRouter();
 const navigateTo = (path) => {
   router.push(path)
 }
+
+useHead(
+    {
+      title: 'KAW-Prints - Administration',
+    }
+)
+
 // Add more functions for other sub-pages
 </script>
-import { useRouter } from 'vue-router';
-const router = useRouter();
 
 <template>
   <v-container>

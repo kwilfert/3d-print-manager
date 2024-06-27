@@ -1,6 +1,12 @@
 <script lang="ts" setup>
 
 import ModelBrowser from "~/components/modelbrowser/ModelBrowser.vue";
+
+useHead(
+    {
+      title: 'KAW-Prints - Shop',
+    }
+)
 </script>
 
 <template>

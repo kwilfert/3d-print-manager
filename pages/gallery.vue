@@ -1,6 +1,12 @@
 <script lang="ts" setup>
 import InstaWidget from "~/components/misc/InstaWidget.vue";
 import insta_qr from "~/assets/images/kaywilfert_qr.png"
+
+useHead(
+    {
+      title: 'KAW-Prints - Gallery',
+    }
+)
 </script>
 <template>
   <v-container>

@@ -29,6 +29,12 @@ watch(order, (newVal) => {
   console.log(JSON.stringify(newVal, null, 2));
 });
 
+useHead(
+    {
+      title: 'KAW-Prints - New Commission',
+    }
+)
+
 </script>
 
 <template>

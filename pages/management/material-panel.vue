@@ -1,5 +1,9 @@
-<script setup>
-
+<script setup lang="ts">
+useHead(
+    {
+      title: 'KAW-Prints - Material Management',
+    }
+)
 </script>
 
 <template>

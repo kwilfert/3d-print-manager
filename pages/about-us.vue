@@ -1,5 +1,12 @@
 <script lang="ts" setup>
 import grandpa from "~/assets/images/grandpa.jpeg"
+
+useHead(
+    {
+      title: 'KAW-Prints - About Us',
+    }
+)
+
 </script>
 
 <template>
